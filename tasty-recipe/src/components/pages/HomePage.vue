@@ -6,18 +6,14 @@
         videos, and how-tos based on the food you love and the friends you follow.</p>
     </div>
 
-    <recipe-list></recipe-list>
+    <recipe-list :recipes="recipeList"></recipe-list>
 
   </div>
 </template>
 
-<script>
-  import RecipeList from '../recipe/RecipeList.vue';
+<script setup>
+import RECIPE_DATA from '../../recipe';
+import RecipeList from '../recipe/RecipeList.vue';
 
-  export default {
-    components: {
-      RecipeList
-    }
-  }
-
+const recipeList = RECIPE_DATA
 </script>
